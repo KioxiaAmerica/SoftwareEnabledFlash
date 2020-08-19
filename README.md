@@ -2,7 +2,7 @@
 
 ##### A new way to maximize the potential of flash.
 
-### KIOXIA Software-Enabled Flash (SEF) Technology
+### KIOXIA Software-Enabled Flash Technology
 
 Hyperscalers are looking to evolve and redefine the use of flash in their data centers. To accelerate this trend, tools are needed that leverage the native speed and flexibility of flash, coupled with the ease of software-defined storage.
 
