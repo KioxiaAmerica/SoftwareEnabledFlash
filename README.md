@@ -10,6 +10,6 @@ KIOXIA Software-Enabled Flash technology supports this emerging paradigm by fund
 
 **Simply put: Software-Enabled Flash technology brings software flexibility and scalability to flash.**
 
-Additional information is available at http://softwareenabledflash.com in case you would like to see what is available today.
+Additional information is available at http://softwareenabledflash.com.
 
 For questions or comments, please use the issue tracking list.
