@@ -31,8 +31,8 @@
  *
  *  Functions and structures for configuring and using SEF units
  *
- *  @version   1.10b
- *  @date      May 2020
+ *  @version   1.10c
+ *  @date      Aug 2020
  *  @copyright Copyright (C) 2018, 2019, 2020 - KIOXIA Corporation. All rights reserved.
  *
  *  @defgroup ApiManCmd API Management Commands
@@ -1051,7 +1051,7 @@ struct SEFWriteOverrides {
  *                                         example, storing LBA address to bind to this write operation such as data
  *                                         tags.
  *  @param      numADU                     Total amount of write data size calculated in ADU.  Maximum allowed is
- *                                         superblockCapacity.
+ *                                         64k ADUs.
  *  @param      iov                        A pointer to the scatter gather list
  *  @param      iovcnt                     The number of elements in the scatter gather list
  *  @param[out] permanentAddresses         Must allocate space for returned permanent addresses equal to 8*length
@@ -1104,7 +1104,7 @@ struct SEFReadOverrides {
  *  has yet to be processed by the client.  In this case, the caller must retry
  *  the read after the changed flash address notification has been processed.
  *
- *  @see        SEFStatus SEFSetRootPointer
+ *  @see        SEFStatus SEFSetRootPointer()
  *
  *  @param      qosHandle        Handle to the QoS Domain
  *  @param      flashAddress     Physical address for the read command; When the
@@ -1446,7 +1446,7 @@ struct SEFWriteWithoutPhysicalAddressIOCB {
   struct SEFPlacementID placementID;    /**< Only valid if the flashAddress is auto allocated. A
                                              value from 0 to numPlacementIds – 1 indicating what
                                              logical data group to place this data in */
-  uint32_t numADU;                      /**< Length in ADUs, maximum is superblockCapacity */
+  uint32_t numADU;                      /**< Length in ADUs, maximum is 64k ADUs */
   uint32_t distanceToEndOfSuperBlock;   /**< Return value in units of ADUs */
 };
 
